@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+// class WelcomeController extends Controller
+// {
+//     public function hello() {
+//         return 'Hello World';
+//     }
+
+//     public function greeting(){
+//         return view('welcome', ['name' => 'Andi']);
+//         }
+// }
+
+class WelcomeController extends Controller
+{
+    public function hello() {
+        return 'Hello World';
+    }
+
+    public function greeting()
+    {
+        return view('blog.hello')
+        ->with('name', 'Juan')
+        ->with('occupation', 'Astronaut');
+
+    }
+}
+
